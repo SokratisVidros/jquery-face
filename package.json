@@ -1,0 +1,54 @@
+{
+  "name": "jquery-face",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "email": "sokratis.vidros@gmail.com",
+    "name": "Sokratis Vidros",
+    "url": "https://github.com/SokratisVidros"
+  },
+  "main": "dist/jquery.face.js",
+  "scripts": {
+    "build": "grunt build",
+    "test": "grunt karma:unit"
+  },
+  "dependencies": {
+    "jquery": ">=1.5.1"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-less": "1.4.0",
+    "grunt-contrib-uglify": "2.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-jscs": "3.0.1",
+    "grunt-karma": "2.0.0",
+    "jscs": "3.0.7",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-firefox-launcher": "1.0.0",
+    "karma-ie-launcher": "1.0.0",
+    "karma-phantomjs-launcher": "1.0.1",
+    "karma-qunit": "1.2.0",
+    "karma-safari-launcher": "1.0.0",
+    "phantomjs": "2.1.7",
+    "qunitjs": "2.0.1"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "jquery",
+    "plugins",
+    "image",
+    "avatar",
+    "retry"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SokratisVidros/jquery-face.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SokratisVidros/jquery-face/issues"
+  }
+}

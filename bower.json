@@ -1,0 +1,25 @@
+{
+  "name": "jquery-face",
+  "license": "MIT",
+  "authors": [
+    "Sokratis Vidros <sokratis.vidros@gmail.com>"
+  ],
+  "description": "",
+  "homepage": "https://github.com/SokratisVidros/jquery-face",
+  "keywords": [
+    "jquery-plugin",
+    "jquery",
+    "plugins",
+    "avatar",
+    "retry"
+  ],
+  "main": "dist/jquery.face.js",
+  "dependencies": {
+    "jquery": "1"
+  },
+  "ignore": [
+    "npm-debug.log",
+    "bower_components",
+    "node_modules"
+  ]
+}
