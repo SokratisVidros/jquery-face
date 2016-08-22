@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 		karma: {
 			unit: {
 				configFile: "karma.conf.js",
-				singleRun: false,
+				singleRun: true,
 				browsers: ["PhantomJS"]
 			}
 
@@ -84,13 +84,6 @@ module.exports = function(grunt) {
 			demo: {
 				options: {
 					port: 8000,
-					// base: {
-					// 	path: '/',
-					// 	options: {
-					// 		index: 'demo/index.html',
-					// 		maxAge: 300000
-					// 	}
-					// },
 					open: {
 						target: 'http://localhost:8000/demo/index.html',
 						appName: 'jQuery.face Demo'

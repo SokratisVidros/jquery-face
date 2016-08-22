@@ -41,21 +41,22 @@
       defaultURL: DEFAULT_AVATAR
     }, options);
 
-    this.find('[data-face]').each(function () {
-      var $face = $(this);
-      var url = stripProtocol($face.data('face'));
-
-      $face
-        .addClass('jq-face')
-        .html('<span class="placeholder"/>');
-
-      loadImage(url, settings.retries, settings.interval, function (e) {
-        var $el = $(e.target).wrapAll('<span class="crop">').parent();
+    this.find('[data-face]')
+      .each(function () {
+        var $face = $(this);
+        var url = stripProtocol($face.data('face'));
 
         $face
-          .empty()
-          .append($el);
-      });
+          .addClass('jq-face')
+          .html('<span class="placeholder"/>');
+
+        loadImage(url, settings.retries, settings.interval, function (e) {
+          var $el = $(e.target).wrapAll('<span class="crop">').parent();
+
+          $face
+            .empty()
+            .append($el);
+        });
     });
   };
 }(jQuery));
