@@ -10,7 +10,7 @@
   "main": "dist/jquery.face.js",
   "scripts": {
     "build": "grunt build",
-    "test": "grunt karma:unit"
+    "test": "grunt karma:travis"
   },
   "dependencies": {
     "jquery": ">=1.5.1"

@@ -64,15 +64,15 @@ module.exports = function(grunt) {
 		karma: {
 			unit: {
 				configFile: "karma.conf.js",
-				singleRun: true,
+				singleRun: false,
 				browsers: ["PhantomJS"]
-			}
+			},
 
-			// travis: {
-			// 	configFile: "karma.conf.js",
-			// 	singleRun: true,
-			// 	browsers: [ "PhantomJS" ]
-			// }
+			travis: {
+				configFile: "karma.conf.js",
+				singleRun: true,
+				browsers: [ "PhantomJS" ]
+			}
 		},
 
 		watch: {
