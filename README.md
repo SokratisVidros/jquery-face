@@ -1,6 +1,7 @@
 # jquery-face
-A comprehensive profile picture renderer.
+[![Build Status](https://travis-ci.org/SokratisVidros/jquery-face.svg?branch=master)](https://travis-ci.org/SokratisVidros/jquery-face)
 
+A comprehensive profile picture renderer.
 
 ![Demo](http://g.recordit.co/Lum0bLIr1E.gif)
 
