@@ -1,6 +1,7 @@
 # jquery-face
 A comprehensive profile picture renderer.
 
+
 ![Demo](http://g.recordit.co/Lum0bLIr1E.gif)
 
 jQuery-face is a jQuery plugin for seamless profile picture rendering. At first, until the image request is resolved, it renders a content placeholder insired by [Facebook](https://codepen.io/Mestika/pen/ByNYBa). As soon as the image is retrieved, it replaces the placeholder. If fetching fails, an exponential backoff retrieval strategy kicks in and tries to refetch the original image. Lastly, when maximum retries have been reached, it renders a fallback image and prevents broken UIs.
