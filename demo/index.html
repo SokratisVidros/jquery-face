@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Face</title>
+    <link rel="stylesheet" type="text/css" href="../dist/jquery.face.css">
+    <style>
+      body {
+        font-family: sans-serif;
+        font-size: 18px;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      h2 {
+        font-size: 0.7em;
+      }
+      .demo {
+        width: 300px;
+      }
+      .face{
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section class='demo'>
+      <h1>jQuery Face Demo</>
+      <div>
+        <h2>On success</h2>
+        <div class='face' data-face='http://goo.gl/SR9ifv'></div>
+      </div>
+      <hr>
+      <div>
+        <h2>On error</h2>
+	  	  <div class='face' data-face='invalid'></div>
+      </div>
+		</section>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="../dist/jquery.face.min.js"></script>
+    <script>
+      $(function () {
+        $('body').face();
+      });
+    </script>
+  </body>
+</html>

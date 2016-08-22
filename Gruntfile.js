@@ -1,6 +1,6 @@
-module.exports = function( grunt ) {
+module.exports = function(grunt) {
 
-	grunt.initConfig( {
+	grunt.initConfig({
 
 		pkg: grunt.file.readJSON("package.json"),
 
@@ -42,7 +42,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// Minify definitions
 		uglify: {
 			dist: {
 				src: ["dist/jquery.face.js"],
@@ -76,15 +75,32 @@ module.exports = function( grunt ) {
 			// }
 		},
 
-		// watch for changes to source
-		// Better than calling grunt a million times
-		// (call 'grunt watch')
 		watch: {
 			files: ["src/*", "test/**/*"],
 			tasks: ["default"]
-		}
+		},
 
-	} );
+		connect: {
+			demo: {
+				options: {
+					port: 8000,
+					// base: {
+					// 	path: '/',
+					// 	options: {
+					// 		index: 'demo/index.html',
+					// 		maxAge: 300000
+					// 	}
+					// },
+					open: {
+						target: 'http://localhost:8000/demo/index.html',
+						appName: 'jQuery.face Demo'
+					},
+					keepalive: true,
+					directory: './'
+				}
+			}
+		}
+	});
 
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
@@ -92,6 +108,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks("grunt-karma");
 
 	grunt.registerTask("travis", ["jshint", "karma:travis"]);
