@@ -42,7 +42,7 @@ An integer indicating the number of failed attempts.
 Default: 3
 
 ### interval
-An integera indicating the exponential backoff interval between failed attempts.
+An integer indicating the exponential backoff interval between failed attempts.
 
 Default: 250
 
