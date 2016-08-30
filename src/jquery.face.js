@@ -17,8 +17,10 @@
         setTimeout(function () {
           loadImage(url, --retries, delay * 2, success);
         }, delay);
+      } else if (settings.defaultImgProps.template) {
+        success({ target: settings.defaultImgProps.template });
       } else {
-        loadImage(settings.defaultURL, 0, 0, success);
+        loadImage(settings.defaultImgProps.url, 0, 0, success);
       }
     };
 
@@ -30,7 +32,12 @@
     settings = $.extend({
       retries: 3,
       interval: 250,
-      defaultURL: DEFAULT_AVATAR
+      className: 'crop',
+      imgProps: {},
+      defaultImgProps: {
+        url: DEFAULT_AVATAR,
+        template: false
+      }
     }, options);
 
     this.find('[data-face]')
@@ -40,13 +47,14 @@
 
         $face
           .addClass('jq-face')
-          .html('<span class="placeholder"/>');
+          .html('<div class="placeholder"/>');
 
         loadImage(url, settings.retries, settings.interval, function (e) {
-          var $el = $(e.target).wrapAll('<span class="crop">').parent();
+          var $el = $(e.target).prop(settings.imgProps);
 
           $face
             .empty()
+            .addClass(settings.className)
             .append($el);
         });
     });
