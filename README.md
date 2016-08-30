@@ -31,10 +31,28 @@ Although the plugin can be used for any type of image, at the moment, it's optim
 
 ## Options
 
-### defaultURL
-A string representing the URL of the fallback image.
+### className
+A string representing the class attribute assigned to the wrapping div element.
 
-Default: The defaultURL is a an image embedded with data-uri.
+Default: 'crop'
+
+### imgProps
+An object rendered as the img HTML properties.
+
+Default: {}
+
+### defaultImgProps
+An object representing the default avatar configuration. The default url property is a an image embedded with data-uri. 
+
+Alternatively, the template string property can be used to render the provided markup as a fallback.
+
+Default:
+```
+{
+   url: DEFAULT_AVATAR,
+   template: false
+}
+```
 
 ### retries
 An integer indicating the number of failed attempts.
