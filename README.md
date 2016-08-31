@@ -1,5 +1,4 @@
 # jquery-face
-[![Build Status](https://travis-ci.org/SokratisVidros/jquery-face.svg?branch=master)](https://travis-ci.org/SokratisVidros/jquery-face)
 
 A comprehensive profile picture renderer.
 
@@ -8,6 +7,8 @@ A comprehensive profile picture renderer.
 jQuery-face is a jQuery plugin for seamless profile picture rendering. At first, until the image request is resolved, it renders a content placeholder insired by [Facebook](https://codepen.io/Mestika/pen/ByNYBa). As soon as the image is retrieved, it replaces the placeholder. If fetching fails, an exponential backoff retrieval strategy kicks in and tries to refetch the original image. Lastly, when maximum retries have been reached, it renders a fallback image and prevents broken UIs.
 
 Although the plugin can be used for any type of image, at the moment, it's optimal for squared images such as those used in Facebook or Twitter profile pictures.
+
+[![Build Status](https://travis-ci.org/SokratisVidros/jquery-face.svg?branch=master)](https://travis-ci.org/SokratisVidros/jquery-face)
 
 ## Usage
 
