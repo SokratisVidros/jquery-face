@@ -1,5 +1,5 @@
 /*
- *  jquery-face - v1.0.2
+ *  jquery-face - v1.0.3
  *  
  *  
  *
