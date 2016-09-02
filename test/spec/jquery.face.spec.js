@@ -53,7 +53,7 @@
 		}, 100);
 	});
 
-	QUnit.test('when image does not exist renders the placeholder and finally the default fallback ', function (assert) {
+	QUnit.test('when image does not exist renders the placeholder and finally the fallback', function (assert) {
 		var done = assert.async();
 
 		$fixture.append('<div data-face="invalid.jpg">').face({
@@ -70,21 +70,16 @@
 		}, 100);
 	});
 
-	QUnit.test('supports default image template', function (assert) {
-		var done = assert.async();
-
-		$fixture.append('<div data-face="invalid.jpg">').face({
+	QUnit.test('when shortcircuit function is used', function (assert) {
+		$fixture.append('<div data-face="avatar_default.jpg">').face({
 			retries: 1,
 			interval: 10,
-			defaultImgProps: {
-				template: '<span class="default">Default Image</span>'
+			shortcircuit: function (url) {
+				return !url || /_default(\-.+)?\.(png|jpe?g)/ig.test(url);
 			}
 		});
 
-		setTimeout(function() {
-			assert.notOk($fixture.find('img').exists());
-			assert.equal($fixture.find('span.default').text(), 'Default Image');
-			done();
-		}, 100);
+		assert.ok($fixture.find('img:eq(0)').exists());
+		assert.ok($fixture.find('img:eq(0)').attr('src').match('data:image/png'));
 	});
 }(jQuery, QUnit));
