@@ -71,7 +71,7 @@
 
         $face.addClass(klass);
 
-        if ($.isFunction(settings.shortcircuit) && settings.shortcircuit(url)) {
+        if (!url || ($.isFunction(settings.shortcircuit) && settings.shortcircuit(url))) {
           renderFallback();
         } else {
           $face.html('<div class="placeholder"/>');
