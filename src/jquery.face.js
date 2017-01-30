@@ -49,7 +49,7 @@
     this.find('[data-face]')
       .each(function () {
         var $face = $(this)
-          , url = stripProtocol($face.data('face'))
+          , url = stripProtocol($face.attr('data-face'))
           , klass = 'jq-face ' + settings.className;
 
         function renderImage(e) {
